@@ -1,0 +1,247 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "youtube.com"
+        buildConfigField "boolean", "admob_ads_enabled", "false"
+        buildConfigField "String", "supportEmail", "\"rivacode.company@gmail.com\""
+
+        minSdkVersion 17
+        targetSdkVersion 27
+
+        versionCode 6
+        versionName "1.0.5"
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file("")
+                storePassword project.KEYSTORE_PASSWORD
+                keyAlias ""
+                keyPassword project.KEY_PASSWORD
+            } catch (ex) {
+                throw new InvalidUserDataException("You should define KEYSTORE_PASSWORD and KEY_PASSWORD in gradle.properties.")
+            }
+        }
+
+        debug {
+            try {
+                storeFile file("")
+                storePassword project.DEBUG_KEYSTORE_PASSWORD
+                keyAlias ""
+                keyPassword project.DEBUG_KEY_PASSWORD
+            } catch (ex) {
+                throw new InvalidUserDataException("You should define DEBUG_KEYSTORE_PASSWORD and DEBUG_KEY_PASSWORD in gradle.properties.")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        getmovies {
+            applicationId "getmovies.com"
+            resValue "string", "app_name", "Get Movies"
+            buildConfigField "String", "appName", "\"Get Movies\""
+
+            resValue "string", "admob_ads_app_id", "\"ca-app-pub-8256297592323597~8136064339\""
+            resValue "string", "admob_ads_banner_id", "\"ca-app-pub-8256297592323597/3097406368\""
+
+            buildConfigField "String", "defLanguageVal", "\"ru\""
+
+            buildConfigField "String", "channel_link", "\"https://www.youtube.com/user/getmovies\""
+            buildConfigField "String", "instagram_link", "\"https://www.instagram.com/malyshariki_official/\""
+
+            buildConfigField "String", "facebook_link", "\"<a href=https://www.facebook.com/GetMovies.Ru> Facebook\""
+            buildConfigField "String", "twitter_link", "\"<a href=https://twitter.com/GetMoviesRu> Twitter\""
+        }
+
+        dantdm {
+            applicationId "dantdm.com"
+            resValue "string", "app_name", "DanTDM"
+            buildConfigField "String", "appName", "\"DanTDM\""
+
+            resValue "string", "admob_ads_app_id", "\"ca-app-pub-8256297592323597~4680675680\""
+            resValue "string", "admob_ads_banner_id", "\"ca-app-pub-8256297592323597/5120369822\""
+
+            buildConfigField "String", "defLanguageVal", "\"en\""
+
+            buildConfigField "String", "channel_link", "\"https://www.youtube.com/user/TheDiamondMinecart\""
+            buildConfigField "String", "instagram_link", "\"https://www.instagram.com/DanTDM/\""
+            
+            buildConfigField "String", "facebook_link", "\"<a href=https://www.facebook.com/TheDiamondMinecart> Facebook\""
+            buildConfigField "String", "twitter_link", "\"<a href=https://twitter.com/dantdm> Twitter\""
+        }
+
+        eeoneguy {
+            applicationId "eeoneguy.com"
+            resValue "string", "app_name", "Ивангай"
+            buildConfigField "String", "appName", "\"Ивангай\""
+
+            resValue "string", "admob_ads_app_id", "\"ca-app-pub-8256297592323597~5956214436\""
+            resValue "string", "admob_ads_banner_id", "\"ca-app-pub-8256297592323597/2946907713\""
+
+            buildConfigField "String", "defLanguageVal", "\"ru\""
+
+            buildConfigField "String", "channel_link", "\"https://www.youtube.com/user/EeOneGuy\""
+            buildConfigField "String", "instagram_link", "\"https://www.instagram.com/boredoneguy/\""
+
+            buildConfigField "String", "facebook_link", "\"<a href=https://www.facebook.com/eeoneguy> Facebook\""
+            buildConfigField "String", "twitter_link", "\"<a href=https://twitter.com/EeOneGuy> Twitter\""
+        }
+
+        slivkishow {
+            applicationId "slivkishow.com"
+            resValue "string", "app_name", "SlivkiShow"
+            buildConfigField "String", "appName", "\"SlivkiShow\""
+
+            resValue "string", "admob_ads_app_id", "\"ca-app-pub-8256297592323597~1261580510\""
+            resValue "string", "admob_ads_banner_id", "\"ca-app-pub-8256297592323597/8058089003\""
+
+            buildConfigField "String", "defLanguageVal", "\"ru\""
+
+            buildConfigField "String", "channel_link", "\"https://www.youtube.com/user/SlivkiChanel\""
+            buildConfigField "String", "instagram_link", "\"https://www.instagram.com/kuki_slivkishow/?hl=ru\""
+
+            buildConfigField "String", "facebook_link", "\"\""
+            buildConfigField "String", "twitter_link", "\"\""
+        }
+
+        minecrafter {
+            applicationId "minecrafter.com"
+            resValue "string", "app_name", "Рецепты Майнкрафт"
+            buildConfigField "String", "appName", "\"Рецепты Майнкрафт\""
+
+            resValue "string", "admob_ads_app_id", "\"ca-app-pub-8256297592323597~2038286192\""
+            resValue "string", "admob_ads_banner_id", "\"ca-app-pub-8256297592323597/6907469498\""
+
+            buildConfigField "String", "defLanguageVal", "\"ru\""
+
+            buildConfigField "String", "channel_link", "\"https://www.youtube.com/user/GrobnicaRA\""
+            buildConfigField "String", "instagram_link", "\"https://www.instagram.com/minecraft/?hl=ru\""
+
+            buildConfigField "String", "facebook_link", "\"\""
+            buildConfigField "String", "twitter_link", "\"\""
+        }
+
+        slime {
+            applicationId "slime.com"
+            resValue "string", "app_name", "Слайм DIY"
+            buildConfigField "String", "appName", "\"Слайм DIY\""
+
+            resValue "string", "admob_ads_app_id", "\"ca-app-pub-8256297592323597~3429847777\""
+            resValue "string", "admob_ads_banner_id", "\"ca-app-pub-8256297592323597/5453375887\""
+
+            buildConfigField "String", "defLanguageVal", "\"ru\""
+
+            buildConfigField "String", "channel_link", "\"https://www.youtube.com/channel/UC8T9kBa--meNGWMgNzntwZA/featured\""
+            buildConfigField "String", "instagram_link", "\"https://www.instagram.com/explore/tags/%D0%BA%D0%B0%D0%BA%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%D0%BB%D0%B8%D0%B7%D1%83%D0%BD%D0%B0/?hl=ru\""
+
+            buildConfigField "String", "facebook_link", "\"\""
+            buildConfigField "String", "twitter_link", "\"\""
+        }
+
+        jacksepticeye {
+            applicationId "jacksepticeye.com"
+            resValue "string", "app_name", "Jacksepticeye"
+            buildConfigField "String", "appName", "\"Jacksepticeye\""
+
+            resValue "string", "admob_ads_app_id", "\"ca-app-pub-8256297592323597~7633844339\""
+            resValue "string", "admob_ads_banner_id", "\"ca-app-pub-8256297592323597/5007680996\""
+
+            buildConfigField "String", "defLanguageVal", "\"en\""
+
+            buildConfigField "String", "channel_link", "\"https://www.youtube.com/user/jacksepticeye\""
+            buildConfigField "String", "instagram_link", "\"https://www.instagram.com/jacksepticeye/\""
+
+            buildConfigField "String", "facebook_link", "\"\""
+            buildConfigField "String", "twitter_link", "\"<a href=https://twitter.com/Jack_Septic_Eye> Twitter\""
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // This is important, it will run lint checks but won't abort build
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation support.multidex
+    // Local jar
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Android modules
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    implementation 'com.android.support:animated-vector-drawable:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+
+    annotationProcessor support.lifecycleCompiler
+
+    implementation support.acra
+    implementation support.ereza
+    // MVP
+    implementation mvp.moxy
+    implementation mvp.moxyCompat
+    annotationProcessor mvp.moxyCompiler
+    implementation mvp.icepick
+    annotationProcessor mvp.icepickProcessor
+    // Dagger 2
+    implementation dagger.dagger
+    annotationProcessor dagger.daggerCompiler
+    implementation dagger.daggerAndroidSupport
+    annotationProcessor dagger.daggerAndroidProcessor
+    // Butterknife
+    implementation butterknife.butterknife
+    annotationProcessor butterknife.butterknifeCompiler
+    // Network
+    implementation net.okhttp3
+    implementation net.cachewebview
+    // DB
+    implementation orm.hawk
+    // RX
+    implementation rx.java
+    implementation rx.android
+    implementation rx.rxBinding
+    // Glide
+    implementation (img.glide) {
+        exclude group: "com.android.support"
+    }
+    annotationProcessor img.glideCompiler
+    implementation img.circleimageview
+    // Player
+    implementation player.npExtractor
+    implementation player.exoplayer
+    implementation player.exoplayerExtension
+}

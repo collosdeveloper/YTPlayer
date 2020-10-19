@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Text size-->
+    <dimen name="channel_item_detail_title_text_size">18sp</dimen>
+    <dimen name="video_item_detail_title_text_size">20sp</dimen>
+</resources>

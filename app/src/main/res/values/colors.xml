@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#155581</color>
+    <color name="colorPrimaryDark">#053d59</color>
+    <color name="colorAccent">#18c2f5</color>
+
+    <color name="light_shadow_start_color">#5a000000</color>
+    <color name="duration_background_color">#aa000000</color>
+    <color name="main_btn_text_color">#fff</color>
+    <color name="main_btn_control_highlight_color">#48ffffff</color>
+    <color name="duration_text_color">#EEFFFFFF</color>
+    <color name="live_duration_background_color">#c8E53935</color>
+    <color name="selected_background_color">#96717171</color>
+    <color name="transparent_background_color">#00000000</color>
+    <color name="light_separator_color">#32000000</color>
+    <color name="video_overlay_color">#64000000</color>
+    <color name="light_queue_background_color">#80FFFFFF</color>
+    <color name="light_queue_btn_color">#aa000000</color>
+    <color name="transparent_50_white_color">#80FFFFFF</color>
+</resources>

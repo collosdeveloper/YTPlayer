@@ -1,0 +1,88 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext.versions = [
+        moxy: "1.5.5",
+        dagger:"2.16",
+        butterknife:"8.8.1",
+        glide:"4.7.1",
+        exoPlayerLibVersion:"2.8.2",
+        icepickLibVersion:"3.2.0"
+]
+
+ext.support = [
+        multidex: "com.android.support:multidex:1.0.3",
+        lifecycleCompiler: "android.arch.lifecycle:common-java8:1.0.0",
+        acra: "ch.acra:acra:4.9.2",
+        ereza: "cat.ereza:customactivityoncrash:2.2.0"
+]
+
+ext.mvp = [
+        moxy: "com.arello-mobile:moxy:$versions.moxy",
+        moxyCompat: "com.arello-mobile:moxy-app-compat:$versions.moxy",
+        moxyCompiler: "com.arello-mobile:moxy-compiler:$versions.moxy",
+        icepick: "frankiesardo:icepick:$versions.icepickLibVersion",
+        icepickProcessor: "frankiesardo:icepick-processor:$versions.icepickLibVersion"
+]
+
+ext.dagger = [
+        dagger: "com.google.dagger:dagger:$versions.dagger",
+        daggerCompiler: "com.google.dagger:dagger-compiler:$versions.dagger",
+        daggerAndroidSupport: "com.google.dagger:dagger-android-support:$versions.dagger",
+        daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:$versions.dagger"
+]
+
+ext.butterknife = [
+        butterknife: "com.jakewharton:butterknife:$versions.butterknife",
+        butterknifeCompiler: "com.jakewharton:butterknife-compiler:$versions.butterknife"
+]
+
+ext.net = [
+        okhttp3: "com.squareup.okhttp3:okhttp:3.10.0",
+        cachewebview: "ren.yale.android:cachewebviewlib:2.0.2"
+]
+
+ext.orm = [
+        hawk: "com.orhanobut:hawk:2.0.1"
+]
+
+ext.rx = [
+        java: "io.reactivex.rxjava2:rxjava:2.1.14",
+        android: "io.reactivex.rxjava2:rxandroid:2.0.2",
+        rxBinding: "com.jakewharton.rxbinding2:rxbinding:2.1.1"
+]
+
+ext.img = [
+        glide: "com.github.bumptech.glide:glide:$versions.glide",
+        glideCompiler: "com.github.bumptech.glide:compiler:$versions.glide",
+        circleimageview: "de.hdodenhof:circleimageview:2.2.0"
+]
+
+ext.player = [
+        npExtractor: "com.github.TeamNewPipe:NewPipeExtractor:66c3c3f45241d4b0c909",
+        exoplayer: "com.google.android.exoplayer:exoplayer:$versions.exoPlayerLibVersion",
+        exoplayerExtension: "com.google.android.exoplayer:extension-mediasession:$versions.exoPlayerLibVersion"
+]

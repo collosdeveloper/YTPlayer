@@ -1,0 +1,55 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="share">@drawable/ic_share_white_24dp</item>
+        <item name="toolbar_shadow_drawable">@drawable/toolbar_shadow_light</item>
+        <item name="selector_drawable">@drawable/light_selector</item>
+        <item name="selected">@drawable/ic_fiber_manual_record_white_24dp</item>
+        <item name="drag_handle">@drawable/ic_drag_handle_white_24dp</item>
+        <item name="separator_color">@color/light_separator_color</item>
+    </style>
+
+    <style name="ReCaptchaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="share">@drawable/ic_share_white_24dp</item>
+        <item name="toolbar_shadow_drawable">@drawable/toolbar_shadow_light</item>
+    </style>
+
+    <style name="ErrorTheme" parent="ReCaptchaTheme"/>
+
+    <style name="VideoPlayerTheme" parent="ReCaptchaTheme">
+        <item name="toolbar_shadow_drawable">@drawable/toolbar_shadow_light</item>
+        <item name="selector_drawable">@drawable/light_selector</item>
+        <item name="selected">@drawable/ic_fiber_manual_record_white_24dp</item>
+        <item name="drag_handle">@drawable/ic_drag_handle_white_24dp</item>
+        <item name="separator_color">@color/light_separator_color</item>
+    </style>
+
+    <style name="NPToolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MainButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:textColor">@color/main_btn_text_color</item>
+        <item name="colorControlHighlight">@color/main_btn_control_highlight_color</item>
+    </style>
+
+    <style name="AdsTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#3b5998</item>
+        <item name="colorPrimaryDark">#324b81</item>
+        <item name="colorAccent">#324b81</item>
+
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+</resources>

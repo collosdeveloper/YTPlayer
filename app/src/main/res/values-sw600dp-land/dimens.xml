@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Element size-->
+    <dimen name="video_item_image_right_margin">6dp</dimen>
+    <dimen name="video_item_duration_vertical_padding">1sp</dimen>
+    <dimen name="video_item_duration_horizontal_padding">5sp</dimen>
+    <!--Text size-->
+    <dimen name="video_item_duration_text_size">11sp</dimen>
+    <dimen name="video_item_title_text_size">14sp</dimen>
+    <dimen name="video_item_uploader_text_size">12sp</dimen>
+    <dimen name="video_item_upload_date_text_size">12sp</dimen>
+    <dimen name="channel_item_detail_title_text_size">21sp</dimen>
+</resources>

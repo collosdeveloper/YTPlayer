@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/channel_header_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/channel_metadata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/channel_banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@android:color/black"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/channel_banner"
+            tools:ignore="ContentDescription"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/channel_avatar_view"
+            android:layout_width="@dimen/channel_avatar_size"
+            android:layout_height="@dimen/channel_avatar_size"
+            android:layout_alignTop="@id/channel_banner_image"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/buddy"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="2dp"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/channel_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/channel_banner_image"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/channel_avatar_view"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/video_item_detail_title_text_size"
+            tools:ignore="RtlHardcoded"
+            tools:text="Lorem ipsum dolor"/>
+
+        <TextView
+            android:id="@+id/channel_subscriber_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/channel_title_view"
+            android:layout_alignRight="@+id/channel_title_view"
+            android:layout_below="@+id/channel_title_view"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:lines="1"
+            android:textColor="@color/selected_background_color"
+            android:textSize="@dimen/channel_subscribers_text_size"
+            android:visibility="gone"
+            tools:ignore="RtlHardcoded"
+            tools:text="123,141,411 subscribers"
+            tools:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/description_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/channel_subscriber_view"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/channel_description_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/description"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/video_item_detail_title_text_size"
+                tools:ignore="RtlHardcoded"
+                tools:text="Description"/>
+
+            <TextView
+                android:id="@+id/channel_description_subtitle_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="left|center"
+                android:minHeight="50dp"
+                android:textColor="@color/selected_background_color"
+                android:textSize="@dimen/channel_subscribers_text_size"
+                tools:ignore="RtlHardcoded"
+                tools:text="Daily gaming videos with DanTDM :) BUSINESS ONLY :: management@dantdmteam.com"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/links_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description_container"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/channel_links_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/links"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/video_item_detail_title_text_size"
+                tools:ignore="RtlHardcoded"
+                tools:text="Links"/>
+
+            <TextView
+                android:id="@+id/facebook_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/fb_soc_name"
+                android:textSize="@dimen/channel_subscribers_text_size"/>
+
+            <TextView
+                android:id="@+id/twitter_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/fb_twit_name"
+                android:textSize="@dimen/channel_subscribers_text_size"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

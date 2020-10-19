@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Element size-->
+    <dimen name="video_item_height">104dp</dimen>
+    <dimen name="video_item_thumbnail_image_width">124dp</dimen>
+    <dimen name="video_item_thumbnail_image_height">80dp</dimen>
+    <dimen name="video_item_image_right_margin">10dp</dimen>
+    <dimen name="video_item_duration_vertical_padding">1sp</dimen>
+    <dimen name="video_item_duration_horizontal_padding">7sp</dimen>
+    <dimen name="channel_avatar_size">120dp</dimen>
+    <!--Text size-->
+    <dimen name="video_item_duration_text_size">12sp</dimen>
+    <dimen name="video_item_title_text_size">16sp</dimen>
+    <dimen name="video_item_uploader_text_size">14sp</dimen>
+    <dimen name="video_item_upload_date_text_size">14sp</dimen>
+    <dimen name="channel_item_detail_title_text_size">18sp</dimen>
+    <dimen name="channel_subscribers_text_size">18sp</dimen>
+    <dimen name="video_item_detail_title_text_size">20sp</dimen>
+</resources>
